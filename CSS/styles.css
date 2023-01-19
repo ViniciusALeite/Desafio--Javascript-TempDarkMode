@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+
+    --ff-text: 'Roboto', sans-serif;
+    --fc-text: hsla(240, 6%, 21%, 1);
+
+    --ic-color: hsla(0, 0%, 100%, 1);
+
+    --bg-button: hsla(240, 9%, 89%, 1);
+    --bg-body: hsla(0, 0%, 100%, 1);
+    --bg-buttonOn: hsla(194, 97%, 31%, 1);
+}
+body {
+    font-family: var(--ff-text);
+    font-size: 6rem;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+   
+    align-items: center;
+    justify-content: center;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.container {
+    width: 30rem;
+    padding: 0 4rem;
+    
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 2rem;
+}
+.timer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lightness,
+.darkness {
+    position: absolute;
+    top: 0;
+    right: 3rem;
+}
+span {
+    font-weight: 500;
+    color: var(--ff-text);
+
+    margin: 5rem 0 .5rem;
+}
+.controls {
+    display: flex;
+    gap: 1rem;
+
+    margin-bottom: 3rem;
+}
+button,
+.cards {
+    border: none;
+    background-color: transparent;
+    
+    cursor: pointer;
+}
+button svg {
+    width: 4rem;
+}
+.hide {
+    display: none;
+}
+.button-cards {
+    width: 11rem;
+    height: 12rem;
+
+    background-color: var(--bg-button);
+    border-radius: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+
+    margin: 0 auto;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "A B"
+    "C D";
+    gap: 1rem;
+}
+input {
+    width: 7rem;
+    height: .5rem;
+    margin-top: 1.5rem;    
+
+    appearance: none;
+    border-radius: 4rem;
+    background: hsla(240, 6%, 21%, 1);
+
+    margin-top: 3rem;
+
+    cursor: pointer;
+}
+.switchColor {
+    background-color: #02799d;
+}
+.switchColor svg path {
+    fill: #FFFFFF;
+}
+.switcToDarkMode {
+    background-color: #29292E;
+}
+.switcToDarkMode svg path {
+    fill: #FFFFFF;
+}
+
+
+@media (min-width: 768px) {
+    span {
+        font-weight: 500;
+        line-height: 14.8rem;
+        color: var(--ff-text);
+    }
+    body {
+        font-family: var(--ff-text);
+        font-size: 10rem;
+    
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+    }
+    .container {
+        min-width: 77rem;
+        padding: 0 4rem;
+        position: relative;
+    }
+    .main-content {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+    .lightness,
+    .darkness {
+        position: absolute;
+        top: 1rem;
+        right: 22rem;
+    }
+    .controls {
+        display: flex;
+        gap: 3.2rem;
+    }
+    .button-cards {
+        width: 13.8rem;
+        height: 15.2rem;
+    
+        background-color: var(--bg-button);
+        border-radius: 2.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "A B"
+        "C D";
+        gap: 3.2rem;
+    }
+    button svg {
+        width: 4.8rem;
+        height: 4.8rem;
+    }
+    .switchColor {
+        background-color: #02799d;
+    }
+    .switchColor svg path {
+        fill: #FFFFFF;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+
+        display: grid;
+        place-content: center;
+        justify-content: center;
+    }
+    .main-content {
+        display: flex;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+
+        margin-left: -20%;
+        margin-top: -10%;
+    }
+    span {
+        font-size: 12.6rem;
+    }
+    .timer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .timer {
+        margin-bottom: 1.7rem;
+    }
+    .container {
+        padding: 0;
+        margin: 0;
+
+        align-items: center;
+    }
+    button svg {
+        width: 6rem;
+        height: 6rem;
+    }
+    .lightness,
+    .darkness {
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+    }
+    .switchColor {
+        background-color: #02799d;
+    }
+    .switchColor svg path {
+        fill: #FFFFFF;
+    }
+}
