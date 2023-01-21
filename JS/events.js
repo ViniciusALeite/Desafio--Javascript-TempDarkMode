@@ -8,10 +8,14 @@ import {
     coffeeButton,
     fireplaceButton,
     lightButton,
-    darkButton
+    darkButton, 
+    forestVolume,
+    rainVolume,
+    coffeeVolume,
+    fireVolume    
 } from "./elements.js";
 import { lessFiveMinutes, moreFiveMinutes, play, resetButtons } from "./controls.js";
-import { forest, rain, cofeeShop, fireplace } from "./sounds.js";
+import { forest, rain, cofeeShop, fireplace, buttonClick, forestAudio, rainAudio, coffeeShopAudio, fireplaceAudio } from "./sounds.js";
 
 playButton.addEventListener('click', play);
 
@@ -21,22 +25,63 @@ moreButton.addEventListener('click', moreFiveMinutes);
 
 lessButton.addEventListener('click', lessFiveMinutes);
 
-forestButton.addEventListener('click', forest);
+forestButton.addEventListener('click', function() {
+    forest()
+    $('.switchColor').removeClass('switchColor');
+    $('.forest').addClass('switchColor'); 
+});
 
-rainButton.addEventListener('click', rain);
+rainButton.addEventListener('click', function() {
+    rain()
+    $('.switchColor').removeClass('switchColor');
+    $('.rain').addClass('switchColor');
+});
 
-coffeeButton.addEventListener('click', cofeeShop);
+coffeeButton.addEventListener('click', function() {
+    cofeeShop()
+    $('.switchColor').removeClass('switchColor');
+    $('.coffeeShop').addClass('switchColor');
+});
 
-fireplaceButton.addEventListener('click', fireplace);
+fireplaceButton.addEventListener('click', function() {
+    fireplace()
+    $('.switchColor').removeClass('switchColor');
+    $('.fireplace').addClass('switchColor'); 
+});
 
-lightButton.addEventListener('click', function(){     
+lightButton.addEventListener('click', function(){  
+    buttonClick()   
     lightButton.classList.add('hide');
     darkButton.classList.remove('hide');
-    $('body').css('background', '#000');
+    $('body').removeClass('switchToDarkMode');
+    $('body').addClass('switchToLightMode');  
 });
 
 darkButton.addEventListener('click', function(){
+    buttonClick()
     lightButton.classList.remove('hide');
     darkButton.classList.add('hide');
+    $('body').removeClass('switchToLightMode');
+    $('body').addClass('switchToDarkMode');  
 });
+
+forestVolume.addEventListener('input', function() {
+    forestAudio.volume = forestVolume.value
+});
+
+rainVolume.addEventListener('input', function() {
+    rainAudio.volume = rainVolume.value
+});
+
+coffeeVolume.addEventListener('input', function() {
+    coffeeShopAudio.volume = coffeeVolume.value
+});
+
+fireVolume.addEventListener('input', function() {
+    fireplaceAudio.volume = fireVolume.value
+});
+
+
+
+
 

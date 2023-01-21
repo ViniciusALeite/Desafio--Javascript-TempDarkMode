@@ -11,50 +11,42 @@ coffeeShopAudio.loop = true;
 fireplaceAudio.loop = true;
 
 function forest() {
-  stopAll();
-  forestAudio.play();
-  buttonClick();
-  $('.switchColor').removeClass('switchColor');
-  $('.forest').addClass('switchColor');  
+  stopAll()
+  forestAudio.play()
+  buttonClick()
 };
 
 function rain() {
-  stopAll();
-  rainAudio.play();
-  buttonClick();
-  $('.switchColor').removeClass('switchColor');
-  $('.rain').addClass('switchColor');  
+  stopAll()
+  rainAudio.play()
+  buttonClick()   
 };
 
 function cofeeShop() {
-  stopAll();
-  coffeeShopAudio.play();
-  buttonClick();
-  $('.switchColor').removeClass('switchColor');
-  $('.coffeeShop').addClass('switchColor'); 
+  stopAll()
+  coffeeShopAudio.play()
+  buttonClick()   
 };
 
 function fireplace() {
-  stopAll();
-  fireplaceAudio.play();
-  buttonClick();
-  $('.switchColor').removeClass('switchColor');
-  $('.fireplace').addClass('switchColor'); 
+  stopAll()
+  fireplaceAudio.play()
+  buttonClick()  
 };
 
 function buttonClick() {
-  buttonPressAudio.play();
+  buttonPressAudio.play()
 };
 
 function timeEnd() {
-  kitchenTimer.play();
+  kitchenTimer.play()
 };
 
 function stopAll() {
-  forestAudio.pause();
-  rainAudio.pause();
-  coffeeShopAudio.pause();
-  fireplaceAudio.pause();
+  forestAudio.pause()
+  rainAudio.pause()
+  coffeeShopAudio.pause()
+  fireplaceAudio.pause()
 };
   
-export { forest, rain, cofeeShop, fireplace, buttonClick, timeEnd };
+export { forest, rain, cofeeShop, fireplace, buttonClick, timeEnd, forestAudio, rainAudio, coffeeShopAudio, fireplaceAudio};

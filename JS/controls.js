@@ -28,5 +28,4 @@
     lessMinutes()
   };
 
-
 export {play, resetButtons, moreFiveMinutes, lessFiveMinutes};  
