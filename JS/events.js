@@ -53,16 +53,16 @@ lightButton.addEventListener('click', function(){
     buttonClick()   
     lightButton.classList.add('hide');
     darkButton.classList.remove('hide');
-    $('body').removeClass('switchToDarkMode');
-    $('body').addClass('switchToLightMode');  
+    $('body').removeClass('Light-Theme');
+    $('body').addClass('Dark-Theme');  
 });
 
 darkButton.addEventListener('click', function(){
     buttonClick()
     lightButton.classList.remove('hide');
     darkButton.classList.add('hide');
-    $('body').removeClass('switchToLightMode');
-    $('body').addClass('switchToDarkMode');  
+    $('body').removeClass('Dark-Theme');
+    $('body').addClass('Light-Theme');  
 });
 
 forestVolume.addEventListener('input', function() {
