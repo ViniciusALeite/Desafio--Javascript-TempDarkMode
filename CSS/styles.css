@@ -90,6 +90,7 @@ button svg {
     justify-content: center;    
 
     margin: 0 auto;
+    box-shadow: 8px 10px 9px -3px rgba(0,0,0,0.52);    
 }
 .cards {
     display: grid;
@@ -144,6 +145,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 .Dark-Theme .button-cards {
     background: #29292E;
+    
 }
 .Dark-Theme input {
     background: #FFFFFF;
@@ -201,7 +203,9 @@ input[type='range']::-webkit-slider-thumb {
         border-radius: 2.4rem;
         display: flex;
         align-items: center;
-        justify-content: center;        
+        justify-content: center;    
+        
+        box-shadow: 8px 10px 9px -3px rgba(0,0,0,0.52);      
     }
     .cards {
         display: grid;
