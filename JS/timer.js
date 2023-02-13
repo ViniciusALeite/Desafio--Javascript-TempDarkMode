@@ -48,13 +48,24 @@ function updateMinutes(newMinutes) {
 };
 
 function addMinutes() {
-  if(Number(minutesDisplay.textContent) == 60) return;
-
+  if((Number(minutesDisplay.textContent) + 5) >= 60) {
+    minutesDisplay.textContent = "60";
+    minutes = minutesDisplay.textContent
+    secondsDisplay.textContent = "00"
+    seconds = secondsDisplay.textContent
+    return;
+  };
   updateMinutes(5)
 };
 
 function lessMinutes() {
-  if(Number(minutesDisplay.textContent) == 0) return;
+  if((Number(minutesDisplay.textContent) - 5) <= 0) {
+    minutesDisplay.textContent = "00";
+    minutes = minutesDisplay.textContent
+    secondsDisplay.textContent = "00"
+    seconds = secondsDisplay.textContent
+    return;
+  };
 
   updateMinutes(-5)
 };
